@@ -39,10 +39,13 @@ class ruby::rubygems (
   }
 
   ### Managed resources
-  if ! defined(Package[$ruby::package_rubygems]) {
-    package { $ruby::package_rubygems:
-      ensure   => $manage_package,
-      noop     => $noops,
+
+  if $ruby::package_rubygems {
+    if ! defined(Package[$ruby::package_rubygems]) {
+      package { $ruby::package_rubygems:
+        ensure   => $manage_package,
+        noop     => $noops,
+      }
     }
   }
 }

@@ -40,8 +40,8 @@ class ruby::params {
   }
 
   $package_rubygems = $::operatingsystem ? {
-    /(?i:Ubuntu)/ => $::lsbmajdistrelease ? { 
-      14            => undef,
+    /(?i:Ubuntu)/ => $::lsbmajdistrelease ? {
+      /14/          => undef,
       default       => 'rubygems',
     },
     default => 'rubygems',

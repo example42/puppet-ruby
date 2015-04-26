@@ -43,8 +43,8 @@ class ruby::rubygems (
   if $ruby::package_rubygems {
     if ! defined(Package[$ruby::package_rubygems]) {
       package { $ruby::package_rubygems:
-        ensure   => $manage_package,
-        noop     => $noops,
+        ensure => $manage_package,
+        noop   => $noops,
       }
     }
   }

@@ -41,8 +41,8 @@ class ruby::devel (
   ### Managed resources
   if ! defined(Package[$ruby::package_devel]) {
     package { $ruby::package_devel:
-      ensure   => $manage_package,
-      noop     => $noops,
+      ensure => $manage_package,
+      noop   => $noops,
     }
   }
 }

@@ -41,8 +41,8 @@ class ruby::rake (
   ### Managed resources
   if ! defined(Package[$ruby::package_rake]) {
     package { $ruby::package_rake:
-      ensure   => $manage_package,
-      noop     => $noops,
+      ensure => $manage_package,
+      noop   => $noops,
     }
   }
 }

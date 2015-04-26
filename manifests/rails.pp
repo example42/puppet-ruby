@@ -41,8 +41,8 @@ class ruby::rails (
   ### Managed resources
   if ! defined(Package[$ruby::package_rails]) {
     package { $ruby::package_rails:
-      ensure   => $manage_package,
-      noop     => $noops,
+      ensure => $manage_package,
+      noop   => $noops,
     }
   }
 }
